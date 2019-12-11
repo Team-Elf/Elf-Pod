@@ -4,5 +4,6 @@
 var x = [1, 2, 3, 8];
 
 function minMax(x) {
-    return
+    return Math.min(x) && Math.max(x);
 }
+console.log(minMax(x));
