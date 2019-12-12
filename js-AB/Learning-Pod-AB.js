@@ -4,10 +4,7 @@
 var x = [1, 2, 3, 8];
 
 function minMax(x) {
-    return Math.min.apply(Math, x);
-    return Math.max.apply(Math, x);
-}
-// console.log(minMax(x));
+
 
 // 2. Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
 
@@ -37,3 +34,4 @@ function testJackpot(result) {
 }
 
 // console.log(testJackpot([2, 2, 2, 2]));
+
