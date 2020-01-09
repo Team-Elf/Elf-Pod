@@ -63,7 +63,7 @@ function insertSpace(y) {
 
 // 5. Create a function that takes an array of names and returns an array with the first letter capitalized.
 
-function CapitalArr(arr) {
+function capitalArr(arr) {
 
     for (var i=0;i<arr.length;i++){
         var s = arr[i].substr(0,1).toUpperCase();
@@ -75,3 +75,37 @@ function CapitalArr(arr) {
     return arr;
 }
 // console.log(CapitalArr(["HELLO", "yar", "string"]));
+
+//https://edabit.com/challenge/JDKfDGtFxb92dj4SQ
+// 6. A snail fell into a bucket and wanted to crawl out. Assuming we already know the snail can climb 5cm per minute, the snail can crawl for 30 minutes continuously and then need to rest for 10 minutes. When it is resting it will slide down 30cm.
+//
+// How many minutes will it take for a snail to crawl out at different depths. Create a function that takes a number of the bucket depth (the unit is cm) as an argument and returns the minutes.
+
+const cal = (depth, min = Math.floor(depth / 150)) => {
+    if (depth <= 150) return Math.ceil(depth / 5);
+    return Math.ceil((depth + (min * 30)) / 5) + (min * 10);
+};
+console.log(cal(31));
+
+//https://edabit.com/challenge/JCs8xAksBjF2M6kjf
+// 7. lPaeesh le pemu mnxit ehess rtnisg! Oh, sorry, that was supposed to say: Please help me unmix these strings!
+//
+// Somehow my strings have all become mixed up; every pair of characters has been swapped. Help me undo this so I can understand my strings again.
+
+function unmix(str) {
+    if (!str) {
+        return "";}
+    if (str.length == 1) {
+        return str;}
+    return str[1] + str[0] + unmix(str.slice(2));
+}
+console.log(unmix("badce"));
+console.log(unmix("apap"));
+
+//https://edabit.com/challenge/6R6gReGTGwzpwuffD
+//8. Create a function that takes an array of numbers and return "Boom!" if the number 7 appears in the array. Otherwise, return "there is no 7 in the array".
+function sevenBoom(arr) {
+    return (arr.join().includes('7') ? "Boom!" : "there is no 7 in the array");
+};
+
+console.log(sevenBoom([8,9,12,1]));
