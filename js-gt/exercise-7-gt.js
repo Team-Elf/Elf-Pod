@@ -1,3 +1,5 @@
+// https://edabit.com/challenge/ZN5cpGPNRS3nrjMo5
+
 // Create a function that takes an array of names and returns an array with the first letter capitalized.
 
 
